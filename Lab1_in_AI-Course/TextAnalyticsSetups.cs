@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Lab1_in_AI_Course
 {
-    class Setups
+    class TextAnalyticsSetups
     {
         public static TextAnalyticsClient GetConfig()
         {
