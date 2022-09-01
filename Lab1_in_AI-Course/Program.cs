@@ -1,4 +1,5 @@
-﻿using Azure.AI.TextAnalytics;
+﻿using AI_Course_Assignments_Library;
+using Azure.AI.TextAnalytics;
 using System;
 
 namespace Lab1_in_AI_Course
@@ -7,14 +8,12 @@ namespace Lab1_in_AI_Course
     {
         static void Main(string[] args)
         {
-            // Create Cognetive client with key and endpoint.
-            TextAnalyticsClient cogClient = TextAnalyticsSetups.GetConfig();
+            var client = Setup.TextAnalyticsClient();
+            var userInput = UserInputs.TextToIdentify();
 
-            Console.WriteLine("Hello and Welcome!\nAdd a text and see if I can understand which language it is.");
-            string inputText = Console.ReadLine();
-            Results.LanguageDetectionResult(cogClient, inputText);
+            Results.LanguageDetectionResult(client, userInput);
 
-            System.Diagnostics.Process.Start("questions.cmd");
+            System.Diagnostics.Process.Start("questions.cmd", $"{UserInputs.Question()}");
         }
     }
 }

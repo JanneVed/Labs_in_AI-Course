@@ -6,4 +6,8 @@
     <RootNamespace>Lab2_in_AI_Course</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AI-Course_Assignments_Library\AI-Course_Assignments_Library.csproj" />
+  </ItemGroup>
+
 </Project>
